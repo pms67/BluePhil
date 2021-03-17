@@ -1,0 +1,364 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 6
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Sensor_Pressure:BMP280 U400
+U 1 1 604A56A1
+P 6050 2400
+F 0 "U400" H 5750 2750 50  0000 L CNN
+F 1 "SPL06-007" H 6300 2250 50  0000 L CNN
+F 2 "Package_LGA:Bosch_LGA-8_2x2.5mm_P0.65mm_ClockwisePinNumbering" H 6050 1700 50  0001 C CNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BMP280-DS001.pdf" H 6050 2400 50  0001 C CNN
+F 4 "C233787" H 6050 2400 50  0001 C CNN "LCSC Part #"
+	1    6050 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor_Motion:MPU-6050 U401
+U 1 1 604A62FF
+P 6300 4850
+F 0 "U401" H 5850 5400 50  0000 C CNN
+F 1 "MPU-6050" H 6600 4300 50  0000 C CNN
+F 2 "Sensor_Motion:InvenSense_QFN-24_4x4mm_P0.5mm" H 6300 4050 50  0001 C CNN
+F 3 "https://store.invensense.com/datasheets/invensense/MPU-6050_DataSheet_V3%204.pdf" H 6300 4700 50  0001 C CNN
+F 4 "C24112" H 6300 4850 50  0001 C CNN "LCSC Part #"
+	1    6300 4850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 604C8342
+P 6050 2800
+AR Path="/60437230/604C8342" Ref="#PWR?"  Part="1" 
+AR Path="/6043964D/604C8342" Ref="#PWR038"  Part="1" 
+F 0 "#PWR038" H 6050 2550 50  0001 C CNN
+F 1 "GND" H 6050 2650 50  0001 C CNN
+F 2 "" H 6050 2800 50  0001 C CNN
+F 3 "" H 6050 2800 50  0001 C CNN
+	1    6050 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 2800 6050 2750
+Wire Wire Line
+	6050 2750 6150 2750
+Wire Wire Line
+	6150 2750 6150 2700
+Connection ~ 6050 2750
+Wire Wire Line
+	6050 2750 6050 2700
+$Comp
+L power:GND #PWR?
+U 1 1 604C8567
+P 6300 5550
+AR Path="/60437230/604C8567" Ref="#PWR?"  Part="1" 
+AR Path="/6043964D/604C8567" Ref="#PWR042"  Part="1" 
+F 0 "#PWR042" H 6300 5300 50  0001 C CNN
+F 1 "GND" H 6300 5400 50  0001 C CNN
+F 2 "" H 6300 5550 50  0001 C CNN
+F 3 "" H 6300 5550 50  0001 C CNN
+	1    6300 5550
+	1    0    0    -1  
+$EndComp
+Text GLabel 5650 2500 0    50   Input ~ 0
+MCU_SPI1_NSS
+Text GLabel 5650 2200 0    50   Input ~ 0
+MCU_SPI1_SCK
+Text GLabel 5650 2400 0    50   Input ~ 0
+MCU_SPI1_MISO
+Text GLabel 5650 2300 0    50   Input ~ 0
+MCU_SPI1_MOSI
+$Comp
+L power:+3.3V #PWR036
+U 1 1 604C89A2
+P 6050 1900
+F 0 "#PWR036" H 6050 1750 50  0001 C CNN
+F 1 "+3.3V" H 6050 2050 50  0000 C CNN
+F 2 "" H 6050 1900 50  0001 C CNN
+F 3 "" H 6050 1900 50  0001 C CNN
+	1    6050 1900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6050 1900 6050 1950
+$Comp
+L Device:C_Small C400
+U 1 1 604C94E2
+P 6400 2150
+F 0 "C400" H 6492 2196 50  0000 L CNN
+F 1 "100n" H 6492 2105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6400 2150 50  0001 C CNN
+F 3 "~" H 6400 2150 50  0001 C CNN
+F 4 "C1525" H 6400 2150 50  0001 C CNN "LCSC Part #"
+	1    6400 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 2050 6400 1950
+Wire Wire Line
+	6400 1950 6150 1950
+Connection ~ 6050 1950
+Wire Wire Line
+	6050 1950 6050 2000
+Wire Wire Line
+	6150 2000 6150 1950
+Connection ~ 6150 1950
+Wire Wire Line
+	6150 1950 6050 1950
+$Comp
+L Device:C_Small C401
+U 1 1 604C9AB8
+P 6800 2150
+F 0 "C401" H 6892 2196 50  0000 L CNN
+F 1 "100n" H 6892 2105 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 6800 2150 50  0001 C CNN
+F 3 "~" H 6800 2150 50  0001 C CNN
+F 4 "C1525" H 6800 2150 50  0001 C CNN "LCSC Part #"
+	1    6800 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 2050 6800 1950
+Wire Wire Line
+	6800 1950 6400 1950
+Connection ~ 6400 1950
+$Comp
+L power:GND #PWR?
+U 1 1 604C9E9E
+P 6400 2350
+AR Path="/60437230/604C9E9E" Ref="#PWR?"  Part="1" 
+AR Path="/6043964D/604C9E9E" Ref="#PWR037"  Part="1" 
+F 0 "#PWR037" H 6400 2100 50  0001 C CNN
+F 1 "GND" H 6400 2200 50  0001 C CNN
+F 2 "" H 6400 2350 50  0001 C CNN
+F 3 "" H 6400 2350 50  0001 C CNN
+	1    6400 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 2350 6400 2300
+Wire Wire Line
+	6400 2300 6800 2300
+Wire Wire Line
+	6800 2300 6800 2250
+Connection ~ 6400 2300
+Wire Wire Line
+	6400 2300 6400 2250
+Text GLabel 5600 4650 0    50   Input ~ 0
+MCU_I2C2_SCL
+Text GLabel 5600 4550 0    50   Input ~ 0
+MCU_I2C2_SDA
+$Comp
+L power:+3.3V #PWR039
+U 1 1 604CA896
+P 6200 4000
+F 0 "#PWR039" H 6200 3850 50  0001 C CNN
+F 1 "+3.3V" H 6200 4150 50  0000 C CNN
+F 2 "" H 6200 4000 50  0001 C CNN
+F 3 "" H 6200 4000 50  0001 C CNN
+	1    6200 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 4100 6400 4100
+Wire Wire Line
+	6400 4100 6400 4150
+Connection ~ 6200 4100
+Wire Wire Line
+	6200 4100 6200 4150
+$Comp
+L Device:C_Small C403
+U 1 1 604CC8CD
+P 4850 4250
+F 0 "C403" H 4942 4296 50  0000 L CNN
+F 1 "100n" H 4942 4205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 4850 4250 50  0001 C CNN
+F 3 "~" H 4850 4250 50  0001 C CNN
+F 4 "C1525" H 4850 4250 50  0001 C CNN "LCSC Part #"
+	1    4850 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 4150 4850 4050
+$Comp
+L Device:C_Small C404
+U 1 1 604CC8D5
+P 5250 4250
+F 0 "C404" H 5342 4296 50  0000 L CNN
+F 1 "100n" H 5342 4205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 5250 4250 50  0001 C CNN
+F 3 "~" H 5250 4250 50  0001 C CNN
+F 4 "C1525" H 5250 4250 50  0001 C CNN "LCSC Part #"
+	1    5250 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 4150 5250 4050
+Wire Wire Line
+	5250 4050 4850 4050
+$Comp
+L power:GND #PWR?
+U 1 1 604CC8DE
+P 4450 4450
+AR Path="/60437230/604CC8DE" Ref="#PWR?"  Part="1" 
+AR Path="/6043964D/604CC8DE" Ref="#PWR040"  Part="1" 
+F 0 "#PWR040" H 4450 4200 50  0001 C CNN
+F 1 "GND" H 4450 4300 50  0001 C CNN
+F 2 "" H 4450 4450 50  0001 C CNN
+F 3 "" H 4450 4450 50  0001 C CNN
+	1    4450 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 4400 5250 4350
+NoConn ~ 5600 5150
+NoConn ~ 5600 5050
+$Comp
+L power:GND #PWR?
+U 1 1 604CD239
+P 5600 4750
+AR Path="/60437230/604CD239" Ref="#PWR?"  Part="1" 
+AR Path="/6043964D/604CD239" Ref="#PWR041"  Part="1" 
+F 0 "#PWR041" H 5600 4500 50  0001 C CNN
+F 1 "GND" H 5600 4600 50  0001 C CNN
+F 2 "" H 5600 4750 50  0001 C CNN
+F 3 "" H 5600 4750 50  0001 C CNN
+	1    5600 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C402
+U 1 1 604D073D
+P 4450 4250
+F 0 "C402" H 4542 4296 50  0000 L CNN
+F 1 "10u" H 4542 4205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 4450 4250 50  0001 C CNN
+F 3 "~" H 4450 4250 50  0001 C CNN
+F 4 "C19702" H 4450 4250 50  0001 C CNN "LCSC Part #"
+	1    4450 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 4450 4450 4400
+Wire Wire Line
+	4450 4400 4850 4400
+Connection ~ 4450 4400
+Wire Wire Line
+	4450 4400 4450 4350
+Wire Wire Line
+	4850 4350 4850 4400
+Connection ~ 4850 4400
+Wire Wire Line
+	4850 4400 5250 4400
+Wire Wire Line
+	4450 4150 4450 4050
+Wire Wire Line
+	4450 4050 4850 4050
+Connection ~ 4850 4050
+Wire Wire Line
+	6200 4000 6200 4050
+Wire Wire Line
+	5250 4050 6200 4050
+Connection ~ 5250 4050
+Connection ~ 6200 4050
+Wire Wire Line
+	6200 4050 6200 4100
+NoConn ~ 7000 4750
+NoConn ~ 7000 4850
+Text GLabel 7000 4550 2    50   Input ~ 0
+IMU_INTERRUPT
+$Comp
+L Device:C_Small C405
+U 1 1 604D946A
+P 7100 5350
+F 0 "C405" H 7192 5396 50  0000 L CNN
+F 1 "100n" H 7192 5305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7100 5350 50  0001 C CNN
+F 3 "~" H 7100 5350 50  0001 C CNN
+F 4 "C1525" H 7100 5350 50  0001 C CNN "LCSC Part #"
+	1    7100 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 5150 7000 5150
+$Comp
+L power:GND #PWR?
+U 1 1 604DA707
+P 7100 5550
+AR Path="/60437230/604DA707" Ref="#PWR?"  Part="1" 
+AR Path="/6043964D/604DA707" Ref="#PWR043"  Part="1" 
+F 0 "#PWR043" H 7100 5300 50  0001 C CNN
+F 1 "GND" H 7100 5400 50  0001 C CNN
+F 2 "" H 7100 5550 50  0001 C CNN
+F 3 "" H 7100 5550 50  0001 C CNN
+	1    7100 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7100 5450 7100 5550
+Wire Wire Line
+	7100 5150 7100 5250
+$Comp
+L Device:C_Small C406
+U 1 1 604DB7DA
+P 7500 5350
+F 0 "C406" H 7592 5396 50  0000 L CNN
+F 1 "2n2" H 7592 5305 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 7500 5350 50  0001 C CNN
+F 3 "~" H 7500 5350 50  0001 C CNN
+F 4 "C1531" H 7500 5350 50  0001 C CNN "LCSC Part #"
+	1    7500 5350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 5250 7500 5050
+Wire Wire Line
+	7500 5050 7000 5050
+$Comp
+L power:GND #PWR?
+U 1 1 604DC157
+P 7500 5550
+AR Path="/60437230/604DC157" Ref="#PWR?"  Part="1" 
+AR Path="/6043964D/604DC157" Ref="#PWR044"  Part="1" 
+F 0 "#PWR044" H 7500 5300 50  0001 C CNN
+F 1 "GND" H 7500 5400 50  0001 C CNN
+F 2 "" H 7500 5550 50  0001 C CNN
+F 3 "" H 7500 5550 50  0001 C CNN
+	1    7500 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 5550 7500 5450
+Text Label 7050 5050 0    16   ~ 0
+IMU_CPOUT
+Text Label 7050 5150 0    16   ~ 0
+IMU_REGOUT
+Wire Notes Line
+	7150 2950 7150 1650
+Wire Notes Line
+	7150 1650 4900 1650
+Wire Notes Line
+	4900 1650 4900 2950
+Wire Notes Line
+	4900 2950 7150 2950
+Wire Notes Line
+	7850 5750 7850 3750
+Wire Notes Line
+	4300 3750 4300 5750
+Wire Notes Line
+	4300 3750 7850 3750
+Wire Notes Line
+	4300 5750 7850 5750
+$EndSCHEMATC

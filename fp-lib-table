@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name BluePhil-Footprints)(type KiCad)(uri ${KIPRJMOD}/BluePhil-Footprints.pretty)(options "")(descr ""))
+)
